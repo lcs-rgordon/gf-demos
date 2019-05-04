@@ -9,6 +9,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Explosion extends Actor
 {
     /**
+     * Instance variables
+     * 
+     * Can be used anywhere in methods below.
+     */
+    private GreenfootImage explosion[];
+
+    /**
      * Constructor
      * 
      * When this actor is created, it makes an explosion animation.
@@ -21,7 +28,15 @@ public class Explosion extends Actor
      */
     Explosion()
     {
-        
+        // Initialize the 'explosion' array with 9 values
+        // (since this is how many images we have)
+        explosion = new GreenfootImage[9];
+
+        // Load the images from disk using a loop
+        for (int i = 0; i < explosion.length; i++)
+        {
+            explosion[i] = new GreenfootImage("explosion-" + i + ".png");
+        }
     }
 
     /**
