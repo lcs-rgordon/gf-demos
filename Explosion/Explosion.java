@@ -16,6 +16,7 @@ public class Explosion extends Actor
     private GreenfootImage explosion[];
     private int frames;
     private static final int delay = 5;
+    GreenfootSound boom;
 
     /**
      * Constructor
@@ -27,6 +28,9 @@ public class Explosion extends Actor
      * http://www.bigrookgames.com/files/UndeadEmpire2DAssets.zip
      * via
      * https://opengameart.org/content/undeadempire-tileset-64x64-repack-floor-lava-walls-and-effects
+     * 
+     * Sound file from:
+     * https://freesound.org/people/smcameron/sounds/51467/
      */
     Explosion()
     {
@@ -39,6 +43,10 @@ public class Explosion extends Actor
         {
             explosion[i] = new GreenfootImage("explosion-" + i + ".png");
         }
+        
+        // Set and play the explosion sound
+        boom = new GreenfootSound("explosion.wav");
+        boom.play();
         
         // Set the frame counter
         frames = 0;
@@ -60,8 +68,9 @@ public class Explosion extends Actor
        }
        else
        {
-           // Remove the explosion
+           // Remove the explosion and stop sound effect
            World myWorld = getWorld();
+           boom.stop();
            myWorld.removeObject(this);
        }
     }    
