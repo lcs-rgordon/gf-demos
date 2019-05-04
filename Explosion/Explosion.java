@@ -14,6 +14,7 @@ public class Explosion extends Actor
      * Can be used anywhere in methods below.
      */
     private GreenfootImage explosion[];
+    private int frames;
 
     /**
      * Constructor
@@ -37,6 +38,9 @@ public class Explosion extends Actor
         {
             explosion[i] = new GreenfootImage("explosion-" + i + ".png");
         }
+        
+        // Set the frame counter
+        frames = 0;
     }
 
     /**
@@ -45,6 +49,19 @@ public class Explosion extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+       // Track frames / time in scenario
+       frames += 1;
+        
+       // Change the image of the actor to create an animation
+       if (frames < explosion.length)
+       {
+           this.setImage(explosion[frames]);
+       }
+       else
+       {
+           // Remove the explosion
+           World myWorld = getWorld();
+           myWorld.removeObject(this);
+       }
     }    
 }
