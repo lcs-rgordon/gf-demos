@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=WalkingMan
+comment0.text=\n\ Demonstration\ of\ animation\ using\ 6\ moving\ sprites\ and\ 1\ standing\ sprite.\n\ \n\ @author\ Jordan\ Cohen\n\ @version\ May\ 2013\n
+comment1.params=
+comment1.target=WalkingMan()
+comment1.text=\n\ Constructor\ for\ WalkingMan\ imports\ the\ necessary\ images,\ sets\n\ values\ for\ variables\ and\ sets\ this\ Actor's\ image\ to\ begin.\n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ walkLeft()
+comment3.text=\n\ Called\ by\ WalkingWorld,\ causes\ the\ player\ to\ move\ left.\n
+comment4.params=
+comment4.target=void\ walkRight()
+comment4.text=\n\ Called\ by\ WalkingWorld,\ causes\ the\ player\ to\ move\ right.\n
+comment5.params=
+comment5.target=void\ stopWalking()
+comment5.text=\n\ Called\ by\ WalkingWorld,\ causes\ the\ player\ to\ stand\ still.\n\ This\ method\ gets\ called\ when\ the\ World\ decides\ that\ neither\n\ directional\ button\ has\ been\ pushed.\n
+numComments=6

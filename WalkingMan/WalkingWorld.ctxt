@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=WalkingWorld
+comment0.text=\n\ World\ to\ control\ animated\ characters.\ All\ of\ the\ code\ that\ actually\ controls\n\ the\ animation\ is\ built\ into\ the\ WalkingMan\ Actor\ class.\ WalkingWorld\ basically\n\ just\ keeps\ track\ of\ the\ controls.\n\ \n\ @author\ Jordan\ Cohen\n\ @version\ May\ 2013\n
+comment1.params=
+comment1.target=WalkingWorld()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ WalkingWorld.\n\ \n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ checkKeys()
+numComments=4
