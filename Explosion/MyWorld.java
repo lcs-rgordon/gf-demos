@@ -18,4 +18,31 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
     }
+    
+    /**
+     * Called about 60 times per second.
+     */
+    public void act()
+    {
+        checkForMouseClick();
+    }
+    
+    /**
+     * Look for a mouse click.
+     */
+    private void checkForMouseClick()
+    {
+        if (Greenfoot.mouseClicked(null))
+        {
+            // Create an explosion at this location
+            Explosion boom = new Explosion();
+            
+            // Get the location of the mouse
+            int x = Greenfoot.getMouseInfo().getX();
+            int y = Greenfoot.getMouseInfo().getY();
+            
+            // Add the explosion to the world
+            addObject(boom, x, y);
+        }
+    }
 }
