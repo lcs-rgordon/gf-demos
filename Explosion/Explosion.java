@@ -15,6 +15,7 @@ public class Explosion extends Actor
      */
     private GreenfootImage explosion[];
     private int frames;
+    private static final int delay = 5;
 
     /**
      * Constructor
@@ -53,9 +54,9 @@ public class Explosion extends Actor
        frames += 1;
         
        // Change the image of the actor to create an animation
-       if (frames < explosion.length)
+       if (frames / delay < explosion.length)
        {
-           this.setImage(explosion[frames]);
+           this.setImage(explosion[frames / delay]);
        }
        else
        {
