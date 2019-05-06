@@ -61,10 +61,18 @@ public class Explosion extends Actor
        // Track frames / time in scenario
        frames += 1;
         
+       // Track animation stage (e.g.: first image, second image, etc)
+       int stage = frames / delay;
+       
        // Change the image of the actor to create an animation
-       if (frames / delay < explosion.length)
+       if (stage < explosion.length)
        {
-           this.setImage(explosion[frames / delay]);
+           // Only update image once when it's time for a new stage of
+           // the animation
+           if (frames % delay == 0)
+           {
+               this.setImage(explosion[stage]);
+           }
        }
        else
        {
